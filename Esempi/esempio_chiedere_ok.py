@@ -6,6 +6,7 @@
 # =====
 # Nota che per vedere se una lista, dizionario o un tuple contiene un valore o dei valori, puoi fare:
 miaLista = [ 1, 6, "zeta"]
+valore = 1
 if valore in miaLista:
     pass # (pass non fa niente...)
 # 'in' in questo senso sarebbe 'nel/nella', quindi:
@@ -25,10 +26,10 @@ def chiedi_ok(domanda_al_utente, numero_di_riprove=4, lamento='Si or no, per fav
 
         numero_di_riprove = numero_di_riprove - 1
 
-        if retries < 0:
+        if numero_di_riprove < 0:
             raise OSError('uncooperative user')
 
-        print(lamento)
+        print lamento
 
 # Pensa a questo:  in un codice tuo, come useresti questa function? che funzione ha?
 # Dovrebbe essere facile dal nome, pero guarda specialmente il blocco if dove viene 'raise'...
